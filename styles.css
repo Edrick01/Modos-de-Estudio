@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0ebf3;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  color: blue;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Contenedor principal de cada "modo" */
+.modo {
+  text-align: left;
+  margin: 20px;
+  background-color: #b181ff;
+  padding: 10px 12px;
+  display: flex; /* fila flexible */
+  flex-direction: row; /* coloca hijos en una línea */
+  align-items: center; /* centra verticalmente el contenido */
+  justify-content: space-between; /* separa contenido y flecha */
+  gap: 12px;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  cursor: pointer; /* indica que es interactivo */
+}
+
+/* Contenedor que agrupa título y párrafo dentro de .modo */
+.modo .contenido {
+  display: flex;
+  flex-direction: column; /* título arriba, párrafo debajo */
+  gap: 6px;
+  flex: 1; /* ocupa el espacio disponible hacia la izquierda */
+}
+
+.modo .contenido p {
+  margin: 0;
+  font-style: italic;
+  /* Ocultar por defecto y permitir transición al mostrarse */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.28s ease, opacity 0.2s ease;
+}
+
+/* Mostrar el párrafo al pasar el ratón o al enfocarlo (accesibilidad) */
+.modo:hover .contenido p,
+.modo:focus-within .contenido p {
+  max-height: 240px; /* suficiente para un párrafo corto */
+  opacity: 1;
+}
+
+/* Flecha: manténla a la derecha; la alineación vertical la aporta el padre (.modo) */
+.flecha {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+  margin-left: 12px; /* separación respecto al contenido principal */
+}
