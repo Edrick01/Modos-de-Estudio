@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(20, 20, 20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.game-container {
+  display: flex; /* Activamos flexbox */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los elementos */
+  background-color: #202020;
+  padding: 40px;
+  border-radius: 30px;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+  background-color: #161616;
+  border-radius: 23px;
+  padding: 40px;
+  color: white;
+  margin-bottom: 20px;
+  box-shadow: #000000 3px 5px 0px;
+}
+
+label {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  background-color: #9dff00;
+  border-radius: 15px;
+  padding: 10px 50px 10px 50px;
+  box-shadow: #497501 3px 5px 0px;
+}
+
+input.guessField {
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid #d1d1d0;
+  width: 200px;
+  text-align: center;
+  box-shadow: #585858 3px 5px 0px;
+}
+
+input.guessSubmit {
+  font-size: 20px;
+  padding: 5px 40px;
+  border-radius: 15px;
+  border: none;
+  background-color: #9dff00;
+  color: black;
+  cursor: pointer;
+  box-shadow: #497501 3px 5px 0px;
+}
+
+.resultados {
+  display: none;
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  background-color: #f08080;
+  border-radius: 23px;
+  padding: 5px 30px;
+  box-shadow: #000000 3px 5px 0px;
+}
+#mensaje {
+  margin: 0;
+}
+.pierde {
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  background-color: #f08080;
+  border-radius: 23px;
+  padding: 5px 30px;
+  box-shadow: #583030 3px 5px 0px;
+}
+
+.gana {
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  background-color: #90ee90;
+  border-radius: 23px;
+  padding: 5px 30px;
+  box-shadow: #1f331f 3px 5px 0px;
+}

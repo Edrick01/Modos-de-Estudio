@@ -1,60 +1,64 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0ebf3;
+  background-color: rgb(20, 20, 20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  padding: 20px;
+  min-height: 100vh;
+}
+.selector {
+  display: flex; /* Activamos flexbox */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #202020;
+  padding: 5px 30px;
+  border-radius: 30px;
+  width: 80vw;
+  max-width: 600px;
 }
 h1 {
-  color: blue;
-  font-size: 24px;
+  font-size: 40px;
   text-align: center;
+  background-color: #161616;
+  border-radius: 23px;
+  padding: 40px 20vw;
+  color: white;
+  margin-bottom: 20px;
+  box-shadow: #000000 3px 5px 0px;
 }
 
-/* Contenedor principal de cada "modo" */
-.modo {
-  text-align: left;
-  margin: 20px;
-  background-color: #b181ff;
-  padding: 10px 12px;
-  display: flex; /* fila flexible */
-  flex-direction: row; /* coloca hijos en una línea */
-  align-items: center; /* centra verticalmente el contenido */
-  justify-content: space-between; /* separa contenido y flecha */
-  gap: 12px;
-  border-radius: 8px;
-  border: 2px solid #000000;
-  cursor: pointer; /* indica que es interactivo */
-}
-
-/* Contenedor que agrupa título y párrafo dentro de .modo */
-.modo .contenido {
-  display: flex;
-  flex-direction: column; /* título arriba, párrafo debajo */
-  gap: 6px;
-  flex: 1; /* ocupa el espacio disponible hacia la izquierda */
-}
-
-.modo .contenido p {
-  margin: 0;
-  font-style: italic;
-  /* Ocultar por defecto y permitir transición al mostrarse */
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.28s ease, opacity 0.2s ease;
-}
-
-/* Mostrar el párrafo al pasar el ratón o al enfocarlo (accesibilidad) */
-.modo:hover .contenido p,
-.modo:focus-within .contenido p {
-  max-height: 240px; /* suficiente para un párrafo corto */
-  opacity: 1;
-}
-
-/* Flecha: manténla a la derecha; la alineación vertical la aporta el padre (.modo) */
-.flecha {
+a {
+  text-decoration: none;
+  color: black;
   font-weight: bold;
-  font-size: 20px;
-  text-align: right;
-  margin-left: 12px; /* separación respecto al contenido principal */
+  font-size: 25px;
+}
+ul {
+  padding: 0;
+  margin: 0 20px 0 0;
+}
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-list {
+  margin: 20px 0 0 0;
+  padding: 20px 10vw;
+  border-radius: 15px;
+  background-color: aliceblue;
+  box-shadow: #585858 3px 5px 0px;
+  transition: transform 0.3s ease;
+}
+
+.game-list:hover {
+  transform: scale(1.05);
 }
