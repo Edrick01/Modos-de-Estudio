@@ -1,5 +1,5 @@
 h1 {
-text-align: center;
+  text-align: center;
   color: white;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
@@ -16,5 +16,89 @@ body {
   margin: 0;
 }
 a {
-  text-decoration:none;
+  text-decoration: none;
+  color: white;
+}
+
+.game-container {
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.regresar {
+  font-size: 25px;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  background-color: #333333;
+  border-radius: 23px;
+  padding: 5px 30px;
+  box-shadow: #000000 3px 5px 0px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: #11111100;
+}
+.btn {
+  font-size: 60px;
+}
+
+.resultados {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  gap: 10px;
+}
+
+#mensaje {
+  font-size: 15px;
+  margin: 0px;
+  background-color: #00000033;
+  border-radius: 15px;
+  padding: 10px;
+}
+#resultado {
+  font-size: 25px;
+  margin: 0px;
+  margin-bottom: 0px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+#estadisticas {
+  font-size: 10px;
+  margin: 0px;
+  background-color: #ffffff33;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.gana {
+  background-color: lightgreen;
+  color: #006400;
+}
+.pierde {
+  background-color: #ff0000;
+  color: #8b0000;
+}
+.empate {
+  background-color: #ffff00;
+  color: #808000;
 }
