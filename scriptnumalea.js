@@ -4,7 +4,9 @@ const mensaje = document.querySelector("#mensaje");
 const cajamensaje = document.querySelector(".resultados");
 const flechaDown = document.getElementById("felcha-down");
 const flechaUp = document.getElementById("felcha-up");
-
+const VecesAdivinadosDiv = document.getElementById("adivinados");
+const CAdivinadosSpan = document.getElementById("CAdivinados");
+let CAdivinados = Number(localStorage.getItem("numAdivinados")) || 0;
 let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
 let resetbtn = document.querySelector("#resetButton");
 console.log("Número aleatorio (para pruebas):", numeroAleatorio);
@@ -20,6 +22,10 @@ enviarBtn.addEventListener("click", function () {
   if (NumUsuario === numeroAleatorio) {
     cajamensaje.className = "gana";
     mensaje.textContent = "¡Felicidades! ¡Has adivinado el número!";
+    CAdivinados++;
+    localStorage.setItem("numAdivinados", CAdivinados);
+    CAdivinadosSpan.textContent = CAdivinados;
+    VecesAdivinadosDiv.style.display = "block";
     Gameover();
   } else if (NumUsuario < numeroAleatorio) {
     cajamensaje.className = "pierde";
