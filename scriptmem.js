@@ -29,7 +29,7 @@ let bloqueoTablero = false; // Variable extra para evitar clicks rápidos
 let ganadas = Number(localStorage.getItem("NumGanadas")) || 0;
 
 // Inicializamos el texto de ganadas al cargar
-if (vecesGanadasSpan) {
+if (vecesGanadasSpan && ganadas) {
   vecesGanadasSpan.textContent = `Has ganado: ${ganadas} veces`;
 }
 
