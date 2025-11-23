@@ -1,18 +1,151 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #252525;
+  background-color: #181818;
 }
 
 h1 {
-  color: #ffffff;
+  color: white;
+  align-items: center;
+}
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.vecesgan {
+  color: rgb(167, 147, 0);
+  font-size: 10px;
+  margin-top: 60px;
+  padding: 0;
+}
+.parejasenc {
+  color: rgb(72, 255, 0);
+  font-size: 10px;
+  margin-top: 60px;
+  padding: 0;
+}
+.game-board {
+  background-color: rgba(1, 48, 0, 0.311);
+  padding: 20px;
+  border-radius: 10px;
+  width: 90vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  perspective: 1000px;
 }
 
-.game-board {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  gap: 10px;
+/*.cartas {
+  background-color: aliceblue;
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s;
+}
+.cartas:hover {
+  transform: scale(1.1);
+}
+.volteada {
+  background-color: #4caf50;
+  color: #ffffff;
+  cursor: default;
+}*/
+
+/* 2. El Contenedor de la carta (El sándwich completo) */
+.carta-contenedor {
+  width: 100px; /* Ajusta a tu tamaño */
+  height: 100px; /* Ajusta a tu tamaño */
+  position: relative;
+  cursor: pointer;
+  /* ESTO ES LA CLAVE: Permite que los hijos giren en 3D */
+  transform-style: preserve-3d;
+  /* La velocidad del giro */
+  transition: transform 0.6s;
+  user-select: none;
+}
+
+/* 3. Cuando le agregamos la clase "volteada" con JS */
+.carta-contenedor.volteada {
+  /* Giramos todo el sándwich 180 grados en el eje Y (horizontal) */
+  transform: rotateY(180deg);
+}
+
+/* 4. Estilos comunes para las dos caras (Frente y Dorso) */
+.cara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* Centrar contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* TRUCO: Esconde la parte de atrás de un elemento cuando se gira */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Para Safari/iOS */
+}
+
+/* 5. Estilo específico del Frente (El signo de ?) */
+.frente {
+  background-color: #168300; /* Color oscuro del reverso */
+  color: white;
+}
+
+/* 6. Estilo específico del Dorso (El emoji) */
+.dorso {
+  background-color: rgb(28, 60, 0); /* Color claro del frente */
+  transform: rotateY(180deg); /* Ya empieza girada, mirando hacia atrás */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  justify-content: center;
+}
+.regresar {
+  font-size: 25px;
   margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  background-color: #333333;
+  border-radius: 23px;
+  padding: 5px 30px;
+  box-shadow: #000000 3px 5px 0px;
+}
+#resetButton {
+  display: none;
+  font-size: 20px;
+  padding: 5px 40px;
+  border-radius: 15px;
+  border: none;
+  background-color: #9dff00;
+  color: black;
+  cursor: pointer;
+  box-shadow: #497501 3px 5px 0px;
 }

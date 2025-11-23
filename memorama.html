@@ -7,10 +7,24 @@
     <link rel="stylesheet" href="stylemem.css" />
   </head>
   <body>
-    <h1>Memorama</h1>
+    <div class="top">
+      <div class="vecesgan"><span id="vecesgan"></span></div>
+      <h1>Memorama</h1>
+      <div class="parejasenc"><span id="parejasenc"></span></div>
+    </div>
 
-    <div id="game-board" class="game-board"></div>
-    <div class="cartas"></div>
+    <div class="game-container">
+      <div id="game-board" class="game-board">
+        <!-- Las cartas se generarán aquí mediante JavaScript -->
+      </div>
+
+      <button id="resetButton" class="guessSubmit">Reiniciar Juego</button>
+
+      <div class="regresar">
+        <a href="index.html"> Regresar </a>
+      </div>
+    </div>
+
     <script src="scriptmem.js"></script>
   </body>
 </html>

@@ -18,7 +18,7 @@ body {
   border-radius: 30px;
   width: 60vw;
   max-width: 1000px;
-  height: 70vh;
+  height: max-content;
   gap: 15px;
 }
 h1 {
