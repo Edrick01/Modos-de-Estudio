@@ -1,0 +1,57 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(53, 53, 53);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(26, 26, 26);
+  width: max-content;
+  height: max-content;
+}
+.tiempo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 60px;
+  padding: 10px;
+  gap: 10px;
+  color: white;
+}
+.prgmd {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+#msj {
+  display: none;
+}
+span {
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 10px;
+}
+button {
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+#pausa {
+  display: none;
+}
